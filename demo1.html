@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link href="source/css/bootstrap.css" rel="stylesheet">
+        <script src="../source/js/bootstrap.bundle.js"></script>
+    <title>task2</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Martel+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.background1{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -370px;
+    top: 100px;
+    height: 150px;
+    width: 150px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: 350px;
+    bottom: -50px;
+}
+.shape:second-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: 400px;
+    bottom: -50px;
+}
+.shape:third-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: 400px;
+    bottom: -50px;
+}
+        body{
+        padding-top: 5%;
+        overflow-x: hidden;
+        font-family: "Roboto", sans-serif;
+       }
+        .parent{
+            min-height: 550px;
+            border-radius: 20px;
+        }
+        .background{
+            background:linear-gradient(to left,#ebedfe,#ebedfe) ;
+            border: 2px solid #5d5c7e;
+            
+        }
+        .imageparent{
+           
+            background-color: #5d5c7e;
+            box-shadow: 10px 0px 20px gray;
+            border-radius: 17px;
+        }
+        #imagemen{
+            background-size: cover;
+            height: 600px;
+            min-width: 400px;
+            
+        }
+        .logo{
+            height: 64px;
+            width: 244px;
+            border-radius: 32px 23px 23px 32px;
+            border: 2px solid #e6a06b;
+            box-sizing: border-box;
+            background: linear-gradient(to left,#5d5c7e,#e6a06b);
+            margin-left: 2px;
+           
+        }
+        .logocircle{
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+        }
+        .logoheading{
+            border-radius: 0% 20px 20px 0%;
+            color: aliceblue;
+            width: 180px;
+            height: 60px;
+            font-size: 24px;
+            padding-top: 5%;
+            box-sizing: border-box;
+        }
+        
+
+        .txtparent{
+            min-height: 580px;
+            max-width: 80%;
+            background-color:#dbdef5;
+            border-radius: 20px;
+            padding: 5px;
+            
+        }
+       
+        h3{
+            color: #5d5c7e;
+            height: 40px;
+            border-bottom: 3px solid #5d5c7e;
+            width: 400px;
+            margin: 0px auto;
+            margin-bottom: 4px;
+        }
+        .form-control{
+            margin-bottom: 5px;
+            border:2px solid #5d5c7e;
+            box-sizing: border-box;
+            background-color: #ebedfe;
+        }
+        .form-control::placeholder{
+            color: #5d5c7e;
+        }
+
+        .txtparent div{
+            padding: 12px;
+            padding-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="row ">
+        <div class="col-sm-12 parent">
+            <div class="row">
+                
+                <div class="col-sm-9 parent  mx-auto background">
+                    <div class="row ">
+
+                        <div class="background1">
+                            <div class="shape"></div>
+                            
+                            <div class="shape"></div>
+                        </div>
+                        <!--IMAGE FLUID-->
+                        <div class="col-sm-3 parent imageparent pt-4 ">
+                            <div class="row logo">
+                                <div class="col-sm-3 bg-primary logocircle  text-light"> logo</div>
+                                <div class="col-sm-9 logoheading  "><span class="fw-bold">LOGO NAME</span></div>
+                            </div>
+                           
+                            <img src="task/sidemen.png" class="img-fluid"  id="imagemen" alt="">
+                        </div>
+                        <!--IMAGE FLUID END-->
+
+
+                        <!--Login PAge-->
+                        <div class="col-sm-9  parent   pt-3">
+                            <h3 class="text-center fw-bold">ADD TUTOR PROFILE</h3>
+                            <div class="row">
+                                <div class="col-sm-12 mx-auto txtparent">
+
+                                    <form action="process_tutor_profile.php" method="post">
+                                    <div class="row">
+                                        <div class="col sm-6 p-3">
+                                            
+                                                <label  for="tutorName">Tutor Name:</label>
+                                                <input class="form-control" type="text" id="tutorName" placeholder="Enter name..." name="tutorName" required>
+                                        
+                                                <label for="profileIcon">Tutor Profile Icon:</label>
+                                                <input class="form-control" type="file" id="profileIcon" name="profileIcon" accept="image/*" required>
+                                        
+                                                <label for="designation">Designation:</label>
+                                                <input class="form-control" type="text" id="designation" placeholder="Enter designation..." name="designation" required>
+                                        
+                                                <label for="aboutTutor">About Tutor:</label>
+                                                <textarea class="form-control" id="aboutTutor" placeholder="About yourself..." name="aboutTutor" rows="4" required></textarea>
+                                        
+                                                <label for="facebookURL">Facebook URL:</label>
+                                                <input class="form-control" type="text" id="facebookURL" name="facebookURL">
+                                        
+                                                <label for="linkedInURL">LinkedIn URL:</label>
+                                                <input class="form-control" type="text" id="linkedInURL" name="linkedInURL">
+                                        
+                                                <label for="instaURL">Instagram URL:</label>
+                                                <input class="form-control" type="text" id="instaURL" name="instaURL">
+                                        
+                                                
+                                        
+                                              
+                                        </div>
+                                        <div class="col sm-6 p-3">
+                                            <label for="experience">Experience:</label>
+                                                <select class="form-control" id="experience" name="experience">
+                                                    <option value="1">1+ Year</option>
+                                                    <option value="1">1+ Year</option>
+                                                    
+                                                   
+                                                </select>
+
+                                            <label  for="skills">Skills:</label>
+                                            <textarea class="form-control" id="skills" name="skills" rows="4"></textarea>
+                                    
+                                            <label for="email">Email ID:</label>
+                                            <input class="form-control" type="email" id="email" name="email" required>
+                                    
+                                            <label for="contactNo">Contact No:</label>
+                                            <input class="form-control" type="tel" id="contactNo" name="contactNo" required>
+                                    
+                                            <label for="address">Address:</label>
+                                            <input class="form-control" type="text" id="address" name="address">
+                                    
+                                            <label for="expertLevel">Expert Level:</label>
+                                            <select class="form-control" id="expertLevel" name="expertLevel">
+                                                <option value="beginner">Beginner Level</option>
+                                                <option value="intermediate">Intermediate Level</option>
+                                                <option value="beginner_advanced">Beginner – Advanced Level</option>
+                                                <option value="expert">Expert Level</option>
+                                            </select>
+                                    
+                                            <input class="form-control " type="submit" value="Add Now">
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--LOGIN END-->
+                    
+                    
+                    
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
